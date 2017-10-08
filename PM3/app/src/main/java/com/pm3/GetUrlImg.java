@@ -16,17 +16,16 @@ import java.net.URI;
  * Created by Felix on 2017/10/7.
  */
 
-public class ImageDownload extends AsyncTask<Uri, Integer, Bitmap> {
+public class GetUrlImg extends AsyncTask<Uri, Integer, Bitmap> {
 
     private ImageView imageView;
-
     private ProgressDialog progressDialog;
 
-    public ImageDownload(Context context, ImageView imageView) {
+    public GetUrlImg(Context context, ImageView imageView) {
         this.imageView = imageView;
 
         progressDialog = new ProgressDialog(context);
-        progressDialog.setTitle("我會慢慢等、慢慢等、慢慢等～");
+        progressDialog.setTitle("Loading ...");
         progressDialog.show();
     }
 
